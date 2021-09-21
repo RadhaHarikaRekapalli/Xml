@@ -1,0 +1,125 @@
+create table sample(id int,Text varchar(200));
+
+insert into sample1(id,Text) values(1,'Harika');
+insert into sample1(id,Text) values(2,'Pavan');
+insert into sample1(id,Text) values(3,'Dhanu');
+insert into sample1(id,Text) values(4,'Harika');
+insert into sample1(id,Text) values(5,'Krishna');
+insert into sample1(id,Text) values(6,'Yogi');
+
+select * from smaple1 order by;
+select Text from sample1 where id=3;
+
+
+#As clause:
+
+select Text As Name from sample1 whrer Text="Harika";
+
+
+#Mathematical Operators:
+
+select Text As Name from sample1 where Text < > 'Harika';
+
+
+create table employeesalary(ID int,EmployeeName Varchar(200),EmpSalary int);
+insert into employeesalary(ID,EmployeeName,EmpSalary) values(1,'Employee 1',50000);
+insert into employeesalary(ID,EmployeeName,EmpSalary) values(2,'Employee 2',45000);
+insert into employeesalary(ID,EmployeeName,EmpSalary) values(3,'Employee 3',70000);
+insert into employeesalary(ID,EmployeeName,EmpSalary) values(3,'Employee 3',19000);
+
+select * from employeesalary;
+select * from employeesalary where EmpSalary Between 1000 and 20000;
+select * from employeesalary where ID in (1,2,3);
+select * from employeesalary where ID Not in (1,2,3);
+select * from employeesalary where EmployeeName LIKE '%Emp%';
+select * from sample where Text LIKE 'sa%';
+
+
+#Concatination Operator:
+
+select EmployeeName | | '------' | | EmpSalary As EmployeeANDSalary from employeesalary;
+select * from employeesalary where EmpSalary<50000 and EmpSalary>10000;
+
+
+# NULL
+insert into employeesalary(ID,EmployeeName,EmpSalary) values(7,NULL,35000);
+select * from employeesalary where EmployeeName is NULL;
+
+
+#distinct clause:
+
+select DISTINCT TEXT from sample1;
+
+
+#Order By:
+
+select * from sample1 order by ID desc;
+select * from sample1 order by;
+
+
+#SQL Functions:
+
+select count(*) from sample1;
+select count(*) from employeesalary;
+select SUM(EmpSalary) from employeesalary;
+select AVG(EmpSalary) from employeesalary;
+select MAX(EmpSalary) from employeesalary;
+select MIN(EmpSalary) from employeesalary;
+
+
+#having clause:
+
+select * from sample1;
+select TEXT from sample1 group by TEXT having count(TEXT) >1;
+
+
+#Number Function:
+
+create table SingleFunction(ID int,DecValue decimal,IntValue int);
+insert into SingleFunction(ID,DecValue,IntValue) values(1,1.232323,123);
+
+select * from SingleFunction;
+select TRUNC(DecValue, 1) from SingleFunction;
+select DecValue from SingleFunction;
+
+select ROUND(DecValue) from SingleFunction;
+select CELI(32.65) from dual;
+select CELI(32.1) from dual;
+select CELI(-32.65) from dual;
+
+
+# Character Functions:
+
+select Upper('sample') from dual;
+select INITCAP('hello i am here') from dual;
+select CONCAT('hello i am here','to work on oracle') from dual;
+select SUBSTR('hello i am here to work on oracle' , 19,15) from dual;
+
+
+#Date functions:
+
+select CURRENT_DATA from dual;
+select CURRENT_TIMESTAMP from dual;
+select ADD_MONTHS(CURRENT_DATE,1) from dual;
+select MONTHS_BETWEEN('20-DEC-21' , '20-OCT-21') from dual;
+
+
+#conversion functions:
+
+select TO_CHAR(sysdate, 'DD month, YYYY') from dual;
+select sysdate from dual;
+
+
+#case( ):
+
+select case when (MOD(4,2)=0) then 'even' else 'odd' end from dual;
+
+
+
+
+
+
+
+
+
+

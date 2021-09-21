@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<patients>
+	<patient>
+		<name>abc</name>
+		<age> 26</age>
+		<height>5'.4"</height>
+		<weight>70 kgs</weight>
+		<Diseases>
+			<disease>Aasthama</disease>
+			<disease>Fever</disease>
+		</Diseases>
+	</patient>
+	<patient>
+		<name>xyz</name>
+		<age> 56</age>
+		<height>5'</height>
+		<weight>85 kgs</weight>
+		<Diseases>
+			<disease>Diabetis</disease>
+			<disease>Peralsys</disease>
+			<disease>High Blood Pressure</disease>
+		</Diseases>
+	</patient>
+</patients>
+			
